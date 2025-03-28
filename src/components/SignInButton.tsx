@@ -7,8 +7,8 @@ export default function SignInButton() {
 
   const handleGoogleSignIn = () => {
     setIsLoading(true);
-    // Direct link to Google OAuth
-    window.location.href = `${window.location.origin}/api/auth/signin?callbackUrl=/dashboard&provider=google`;
+    // Use the direct URL approach with explicit parameters
+    window.location.href = '/api/auth/signin?provider=google&callbackUrl=/dashboard';
   };
 
   return (
