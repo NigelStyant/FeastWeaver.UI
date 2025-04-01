@@ -6,10 +6,10 @@ export function middleware() {
   const response = NextResponse.next();
 
   // Add Content Security Policy headers to fix the Missing_CSP error
-  response.headers.set(
-    "Content-Security-Policy",
-    "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://accounts.google.com; frame-src 'self' https://accounts.google.com"
-  );
+  // response.headers.set(
+  //   "Content-Security-Policy",
+  //   "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://accounts.google.com; frame-src 'self' https://accounts.google.com"
+  // );
 
   return response;
 }
